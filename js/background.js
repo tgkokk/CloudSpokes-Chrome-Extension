@@ -39,7 +39,7 @@ function checkForChallenge() {
 	    var notify = webkitNotifications.createNotification(
 		"../icon48.png",
 		"Challenge alert!",
-		"Thallenge \"" + challenge["name"] + "\" ends in less than " + notifyMost + " " + notifyMostText + ". " +
+		"The challenge \"" + challenge["name"] + "\" ends in less than " + notifyMost + " " + notifyMostText + ". " +
 		"Click on this notification to be taken to the challenge."
 	    );
 	    $(notify).click(function() {
