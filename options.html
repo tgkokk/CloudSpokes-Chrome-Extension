@@ -1,0 +1,91 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>CloudSpokes Chrome Extension - Options</title>
+    <link rel="stylesheet" href="css/chrome-bootstrap.css">
+    <style>
+      .margin-left {margin-left:10px !important;}
+      .margin-top {margin-top:10px !important;}
+      .margin-right {margin-right:10px !important;}
+      .margin-bottom {margin-bottom:10px !important;}
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/options.js"></script>
+  </head>
+  <body class="frame">
+    <div id="navigation">
+      <h1>CloudSpokes</h1>
+      <ul class="menu">
+	<li class="selected">
+	  <a href="#challenges">Challenges</a>
+	</li>
+	<li>
+	  <a href="#messages">Messages</a>
+	</li>
+      </ul>
+    </div>
+    <div class="mainview view">
+      <div id="challenges" class="selected">
+	<header>
+	  <h1>Challenges</h1>
+	</header>
+	<div class="content">
+	  <div class="margin-top">
+	    <input type="checkbox" id="enable-challenges">
+	    <label for="enable-challenges" class="margin-left" title="This option tells the extension to send you notifications when a challenge in which you participate has less than a given amount of time left.">Enable challenge notifications</label>
+	  </div>
+	  <div id="challenges-hidden" style="display:none;">
+	    <br />
+	    <input type="checkbox" id="no-submitted-challenges">
+	    <label for="no-submitted-challenges" class="margin-left">Send notifications only when I haven't submitted</label>
+	    <br /><br />
+	    <label for="challenges-interval">Check every </label>
+	    <input class="margin-left" type="text" id="challenges-interval">
+	    <select class="margin-left" id="challenges-interval-text">
+	      <option>days</option>
+	      <option>hours</option>
+	      <option selected>minutes</option>
+	      <option>seconds</option>
+	    </select>
+	    <br /><br />
+	    <label for="notify-most">Notify when a challenge has at most </label>
+	    <input class="margin-left" type="text" id="notify-most">
+	    <select class="margin-left" id="notify-most-text">
+	      <option>days</option>
+	      <option selected>hours</option>
+	      <option>minutes</option>
+	      <option>seconds</option>
+	    </select>
+	    left
+	  </div>
+	  <button class="margin-top" id="save-challenges">Save options</button>
+	  <span id="saved-challenges" style="display:none;">Saved!</span>
+	</div>
+      </div>
+      <div id="messages">
+	<header>
+	  <h1>Messages</h1>
+	</header>
+	<div class="content">
+	  <div class="margin-top">
+	    <input type="checkbox" id="enable-messages">
+	    <label for="enable-messages" class="margin-left">Enable new message notifications</label>
+	  </div>
+	  <div id="messages-hidden" style="display:none;">
+	    <br />
+	    <label for="messages-interval">Check every </label>
+	    <input class="margin-left" type="text" id="messages-interval">
+	    <select class="margin-left" id="messages-interval-text">
+	      <option>days</option>
+	      <option>hours</option>
+	      <option selected>minutes</option>
+	      <option>seconds</option>
+	    </select>
+	  </div>
+	  <button class="margin-top" id="save-messages">Save options</button>
+	  <span id="saved-messages" style="display:none;">Saved!</span>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
